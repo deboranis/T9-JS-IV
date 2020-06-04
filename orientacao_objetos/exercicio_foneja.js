@@ -13,10 +13,15 @@ class Cliente {
 
 
     descontar() {
-        if (this.valor > 1500) {
-            return `Terá um desconto de 10%`
-        } else {
-            return `Não terá desconto`
+        if (this.valor <= 1500) {
+            const porcentagem = (this.valor * 5 / 100);
+            return `Terá um desconto de 5%, ou R$${porcentagem}. O valor do pagamento é R$${this.valor - porcentagem}.`
+        } else if (this.valor > 1500 && this.valor <= 3000) {
+            const porcentagem = (this.valor * 7) / 100;
+            return `Terá um desconto de 7%, ou R$${porcentagem}. O valor do pagamento é R$${this.valor - porcentagem}.`
+        } else if (this.valor > 3000) {
+            const porcentagem = (this.valor * 10) / 100;
+            return `Terá um desconto de 10%, ou R$${porcentagem}. O valor do pagamento é R$${this.valor - porcentagem}.`
         }
     }
 
@@ -43,3 +48,48 @@ const cliente3 = new Cliente('Raquel Borges Figueredo', '910.311.425-01', '21/3/
 console.log('Primeira cliente: ', cliente3)
 console.log('Terá desconto? ', cliente3.descontar())
 console.log('Cor disponível?', cliente3.verificaCor())
+
+
+// //////EXERCICIOS DO QUIZ
+
+
+// class Colaboradores {
+//     constructor(nome, departamento, funcao) {
+//         this.nome = nome;
+//         this.departamento = departamento;
+//         this.funcao = funcao;
+//     }
+// }
+
+// class Usuario {
+//     constructor(nome, email, confirmacaoEmail) {
+//     this.nome = nome;
+//     this.email = email.toLowerCase;
+//     this.confirmacaoEmail = confirmacaoEmail.toLowerCase;
+//     }
+
+//     verificador() {
+//     const emailIgual = this.email === this.confirmacaoEmail ? `email conferido` : `email inválido`;
+//     return emailIgual;
+//     }
+//     }
+
+//     const user1 = new Usuario('Moana', 'meU@email.com', 'MEU@email.com')
+//     console.log(user1.verificador())
+
+//     //Crie um metodo que confirme se os dois emails são iguais ou diferentes. Lembre-se de tratar o campo de emails, colocando-os em letras minúsculas e testando o código para verificar se realmente deu certo. 
+
+//     class Usuario {
+//         constructor(nome, sobrenome, email, confirmacaoEmail) {
+//         this.nome = nome;
+//         this.sobrenome = sobrenome;
+//         this.email = email;
+//         this.confirmacaoEmail = confirmacaoEmail;
+//         }
+
+//         saudacao() {
+//             return `Olá ${nome} ${sobrenome}, seja bem vinda à plataforma de estudos da Reprograma!`
+//         }
+//         }
+
+//         //////6. Insira uma propriedade chamada sobrenome na classe Usuario. Em seguida, crie um método de saudações e retorne a seguinte frase: `Olá nome sobrenome, seja bem vinda a plataforma de estudos da Reprograma!`
