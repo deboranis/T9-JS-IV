@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class Cliente {
     constructor(nome, email, cpf) { //vai construir pelos paramentros que estamos passando
         this.nome = nome;
@@ -21,7 +20,6 @@ class celular {
 }
 
 const celular1 = new celular('super x', 'xx-y', 900)
-=======
 import { Cliente } from './Cliente.js';
 
 
@@ -44,5 +42,3 @@ console.log('------------------------')
 const cliente3 = new Cliente('Raquel Borges Figueredo', '910.311.425-01', 4000, 'MDM-PRO', 2020, 'Azul', 'MG-BR', 'Fran Carneiro de Pinha')
 console.log('Segunda cliente: ', cliente3)
 console.log(cliente3.descontar())
-
->>>>>>> cdb3cdde2f33b31c1f6ee5aff5b52e937395d0ca
